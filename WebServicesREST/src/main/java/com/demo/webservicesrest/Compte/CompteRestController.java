@@ -13,7 +13,7 @@ et pour cela on peut désactiver la notation Bean dans la classe DeployJerseySer
 /* On peut ajouter qui RestController est le plus fiable Rest API dans ce cas, car nous avons dans l'écosystème de spring, et le standard
 * dans jee est jax-rs*/
 
-//@RestController
+@RestController
 @RequestMapping(path = "/banque")
 public class CompteRestController {
     @Autowired
