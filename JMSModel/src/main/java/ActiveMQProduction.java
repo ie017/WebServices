@@ -18,7 +18,7 @@ public class ActiveMQProduction {
         Session session = connection.createSession(false,Session.AUTO_ACKNOWLEDGE);
 
         // Create destination (Topic or Queue)
-        Destination destination = session.createTopic("MyTopic");
+        Destination destination = session.createQueue("MyQueue");
 
         //Create Message Producer from session to teh topic
         MessageProducer producer = session.createProducer(destination);
@@ -34,6 +34,7 @@ public class ActiveMQProduction {
 
         //Send message
         producer.send(message);
+        System.out.println("200 OK");
         //Clean up
         session.close();
         connection.close();
